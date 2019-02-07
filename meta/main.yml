@@ -1,0 +1,22 @@
+---
+dependencies:
+  - geerlingguy.repo-epel
+
+galaxy_info:
+  author: kietnguyen
+  role_name: repo_ius
+  description: IUS's RPM repository for CentOS.
+  license: "license (BSD, MIT)"
+  min_ansible_version: 1.8
+  platforms:
+    - name: EL
+      versions:
+        - 6
+        - 7
+  galaxy_tags:
+    - packaging
+    - epel
+    - ius
+    - repository
+    - repo
+    - centos

@@ -1,0 +1,10 @@
+---
+- name: Install IUS repo
+  yum:
+    name: "{{ ius_repo_url }}"
+    state: present
+
+- name: Import IUS GPG key
+  rpm_key:
+    key: "{{ ius_repo_gpg_key_url }}"
+    state: present
