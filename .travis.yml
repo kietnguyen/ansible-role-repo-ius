@@ -4,6 +4,7 @@ services: docker
 
 env:
   global:
+    - GITHUB_REPO_NAME: ansible-role-repo-ius
     - ROLE_NAME: repo_ius
   matrix:
     - MOLECULE_DISTRO: centos7
@@ -16,7 +17,7 @@ install:
 before_script:
   # Use actual Ansible Galaxy role name for the project directory.
   - cd ../
-  - mv ansible-role-$ROLE_NAME kietnguyen.$ROLE_NAME
+  - mv $GITHUB_REPO_NAME kietnguyen.$ROLE_NAME
   - cd kietnguyen.$ROLE_NAME
 
 script:
